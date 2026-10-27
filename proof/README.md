@@ -45,7 +45,9 @@ This is an independent behavioral check against Apple's compiled mapping through
 
 The original user physically typed `ч/Ч` from the upper key and `§/±` from the lower key, then rebooted and confirmed correct operation again on 27 October 2026. This confirmed the per-user installation mechanism on one Mac.
 
-Before publication, an expanded test found that the first export merged left/right modifiers, causing right Shift with Caps Lock to differ from Apple. The export was corrected to use all 256 explicit modifier masks, rebuilt, installed, re-registered, and checked again. The final published hash above passed the expanded native comparison. A subsequent reboot of this exact final revision has not yet been observed; the user-reported reboot test preceded that correction. The installation method and input-source identity were retained.
+Before publication, an expanded test found that the first export merged left/right modifiers, causing right Shift with Caps Lock to differ from Apple. The export was corrected to use all 256 explicit modifier masks, rebuilt, installed, re-registered, and checked again. The final published hash above passed the expanded native comparison.
+
+The user then rebooted the Mac again and confirmed correct physical typing with the final published revision. A fresh native comparison after that reboot again passed all **1,015,808 translations**, with the installed file matching the repository artifact byte for byte. The static XML comparison also passed, and all 4,096 saved British translation cases remained unchanged. The saved input-source configuration retained British and the custom Bulgarian source. `hidutil` reported no active UserKeyMapping values. See [post-reboot-verification.txt](post-reboot-verification.txt). This remains verification on one Mac, not certification for all hardware or macOS versions.
 
 English was not edited or replaced. On the tested Mac, British remained the separate English input source; a before/after comparison of its 4,096 neutral-state translation results matched. Personal preference backups and machine-specific rollback scripts are intentionally excluded from this public repository.
 
@@ -60,6 +62,7 @@ No test can prove that all future use is harmless. The concrete safety propertie
 ## Files and provenance
 
 - `verification.txt`: fresh report from the public read-only checker.
+- `post-reboot-verification.txt`: repeat checks after the final revision's reboot and the user's physical-typing confirmation.
 - `keyboard-layout.diff`: exact unified diff between the reconstructed reference and custom XML.
 - `../tools/build.rb`: reads the local Apple layout and writes both normalized exports.
 
