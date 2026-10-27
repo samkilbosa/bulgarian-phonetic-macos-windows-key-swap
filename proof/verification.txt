@@ -1,0 +1,11 @@
+macOS: 27.0.1
+Build: 26A434
+Keyboard type: 92
+Original source: com.apple.keylayout.Bulgarian-Phonetic
+Custom source: org.unknown.keylayout.Bulgarian-PhoneticWindows
+Layout SHA-256: fc51a9afa8091b4a58cd20bbfd41e1b99d58c3a750bfadce378cecce3347bb25
+PASS: 1015808 translations across 31 reachable state pairs.
+Coverage: keycodes 0-127; 256 modifier masks; reachable accent states; key-down translation.
+All compared outputs match Apple after swapping only virtual keycodes 10 and 50.
+Installed artifact matches repository artifact byte for byte.
+No installation, preference writes, source selection, or network operations performed.
