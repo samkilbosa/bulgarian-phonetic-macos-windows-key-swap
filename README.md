@@ -33,7 +33,7 @@ These use the standard macOS input-source controls. See [Apple's input-source se
 
 Select **Bulgarian - Phonetic Windows** from the input menu or with Globe/Fn. Type the upper-left key: `ч`; hold Shift: `Ч`. The lower key should type `§`; hold Shift: `±`. Switch to English and confirm that its behavior is unchanged.
 
-The layout is a file loaded by macOS, so it needs no login launcher, delay, polling job, or `hidutil` command. Keep the file installed and the custom input source enabled. The original user confirmed this installation method worked **after a reboot** on the tested Mac. The final export subsequently received a modifier edge-case correction; see the [test history and scope](proof/README.md).
+The layout is a file loaded by macOS, so it needs no login launcher, delay, polling job, or `hidutil` command. Keep the file installed and the custom input source enabled. The original user confirmed the **final published layout worked after a reboot**, followed by a fresh full native comparison; see the [post-reboot report](proof/post-reboot-verification.txt) and [test history and scope](proof/README.md).
 
 ## Safety and what the evidence proves
 
