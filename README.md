@@ -83,4 +83,22 @@ ruby tools/build.rb ./generated
 
 Ruby and the macOS Carbon/CoreFoundation frameworks are used only by the optional tools. The native checker reports differences if Apple changes its source layout. Inspect and test fresh builds rather than assuming a newer macOS version has identical mappings.
 
-Search terms: Bulgarian phonetic macOS, Bulgarian QWERTY Mac, Windows Ч key, ч до 1, § key swap, ISO keyboard, permanent Bulgarian keyboard layout, Ukelele keylayout, hidutil alternative.
+## Frequently asked questions / Често задавани въпроси
+
+### How do I move Ч next to 1 on a Mac? / Как да преместя Ч до 1 на Mac?
+
+Install the custom **Bulgarian - Phonetic Windows** layout using the [installation steps above](#download-and-install). On an ISO Mac keyboard, it swaps the Bulgarian `ч / Ч` key with `§ / ±`, putting Ч immediately left of 1, as requested by users accustomed to Windows.
+
+Инсталирайте **Bulgarian - Phonetic Windows** според [инструкциите по-горе](#download-and-install). На ISO клавиатурата буквата **ч / Ч** се премества вляво от **1**, а **§ / ±** — между левия **Shift** и **Z**.
+
+### Does the layout survive a restart? / Запазва ли се подредбата след рестарт?
+
+Yes, on the tested Mac the final layout continued working after reboot. Keep its `.keylayout` file installed and its input source enabled. No startup script or delayed remapping command is needed. See the [post-reboot verification](proof/post-reboot-verification.txt) for the tested setup and results.
+
+Да — окончателната версия е проверена след рестарт на тествания Mac. Файлът трябва да остане инсталиран, а подредбата — добавена в настройките. Не е необходим скрипт при стартиране.
+
+### Will this change my English keyboard? / Променя ли се английската подредба?
+
+No. This is a separate Bulgarian input source. Your existing English layout stays unchanged; Globe/Fn switches between the input sources you have enabled.
+
+Не. Това е отделна българска подредба. Английската остава непроменена, а с Globe/Fn превключвате между добавените подредби.
